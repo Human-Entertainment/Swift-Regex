@@ -11,6 +11,6 @@ final class RegexTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testStringLiteral", testStringLiteral),
     ]
 }

@@ -13,3 +13,5 @@ struct Regex: ExpressibleByStringLiteral {
 }
 
 extension Regex: CustomStringConvertible {}
+
+extension Regex: Equatable {}
