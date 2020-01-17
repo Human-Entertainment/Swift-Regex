@@ -1,6 +1,54 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 1,
+      "symbol": "Regex",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 69,
+      "symbol": "Regex.RegexMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 70,
+      "symbol": "Regex.RegexMode.first",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 71,
+      "symbol": "Regex.RegexMode.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 74,
+      "symbol": "Regex.RegexError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 82,
+      "symbol": "Regex",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inuk/Coding/Regex/Sources/Regex/Regex.swift",
+      "line": 84,
+      "symbol": "Regex",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/inuk/Coding/Regex"
 }
