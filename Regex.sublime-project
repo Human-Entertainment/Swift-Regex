@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"name": "Regex",
+			"path": ".",
+			"folder_exclude_patterns": [".*"],
+		},
+	]
+}
