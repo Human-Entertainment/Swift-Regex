@@ -2,10 +2,18 @@
 	"folders":
 	[
 		{
-			"name": "Regex",
+			"name": "Project",
 			"path": ".",
-			"folder_exclude_patterns": [".*", "docs"],
+			"folder_exclude_patterns": [".*", "docs", "Sources", "Tests"],
 		},
+		{
+			"name": "Regex",
+			"path": "Sources/Regex"
+		},
+		{
+			"name": "Regex Tests",
+			"path": "Tests/RegexTests"
+		}
 	],
 	"settings": {
   		
