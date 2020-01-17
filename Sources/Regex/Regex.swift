@@ -13,7 +13,3 @@ struct Regex: ExpressibleByStringLiteral {
 }
 
 extension Regex: CustomStringConvertible {}
-
-let hello: Regex = "My pattern"
-
-print(hello)
