@@ -1,7 +1,7 @@
-struct Regex: ExpressibleByStringLiteral {
+public struct Regex: ExpressibleByStringLiteral {
     
 	/// This is the pattern you're going to want to match
-    init(stringLiteral value: String) {
+    public init(stringLiteral value: String) {
         self.pattern = value
     }
     
@@ -66,12 +66,12 @@ struct Regex: ExpressibleByStringLiteral {
     	return toMatch.map{ pattern.contains($0) }.contains(true)
     }
 
-    enum RegexMode {
+    public enum RegexMode {
     	case first
     	case all
     }
 
-    enum RegexError: Error {
+    public enum RegexError: Error {
     	/// There where no match
     	case noMatch
     	/// The pattern to be matched is written wrongly
