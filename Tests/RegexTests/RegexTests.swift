@@ -10,7 +10,14 @@ final class RegexTests: XCTestCase {
         XCTAssertEqual(hello, "Hello, World!")
     }
 
+    func testMatchFirst() {
+        let pattern: Regex = "hello"
+        let toMatch = "Hello World!"
+        XCTAssertEqual(try? pattern.match(toMatch: toMatch), pattern.description)
+    }
+
     static var allTests = [
         ("testStringLiteral", testStringLiteral),
+        ("testMatchFirst", testMatchFirst),
     ]
 }
