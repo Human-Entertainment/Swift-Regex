@@ -27,8 +27,6 @@ struct Regex: ExpressibleByStringLiteral {
     	return match
     }
 
-
-    // TODO: Make this!
     /**
 	Matches the given pattern with `toMatch`
 
@@ -46,6 +44,11 @@ struct Regex: ExpressibleByStringLiteral {
 	    	// For mode = .first
 	    	var matches = 0
 	    	for character in toMatch {
+                // TODO: This matches anthing as long as it contains the given character
+                if pattern.contains(character) {
+                    collection.append(pattern)
+                    matches += 1
+                }
 	    		if mode == .first && matches > 0 {
 	    			break
 	    		}
@@ -60,7 +63,7 @@ struct Regex: ExpressibleByStringLiteral {
     /**
     */
     public func doesMatch(toMatch: String) -> Bool {
-    	return false
+    	return toMatch.map{ pattern.contains($0) }.contains(true)
     }
 
     enum RegexMode {
