@@ -4,7 +4,10 @@
 		{
 			"name": "Regex",
 			"path": ".",
-			"folder_exclude_patterns": [".*"],
+			"folder_exclude_patterns": [".*", "docs"],
 		},
-	]
+	],
+	"settings": {
+  		
+  	}
 }
