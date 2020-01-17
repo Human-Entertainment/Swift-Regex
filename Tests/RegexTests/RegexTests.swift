@@ -16,8 +16,17 @@ final class RegexTests: XCTestCase {
         XCTAssertEqual(try? pattern.match(toMatch: toMatch), pattern.description)
     }
 
+    func testDoesMatch() {
+        let pattern: Regex = "Hello"
+        let toMatchFalse = "Such is life"
+        XCTAssertEqual(pattern.doesMatch(toMatch: toMatchFalse), false)
+        let toMatchTrue = "Hello World"
+        XCTAssertEqual(pattern.doesMatch(toMatch: toMatchTrue), true)
+    }
+
     static var allTests = [
         ("testStringLiteral", testStringLiteral),
         ("testMatchFirst", testMatchFirst),
+        ("testDoesMatch", testDoesMatch),
     ]
 }
