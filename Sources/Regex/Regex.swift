@@ -11,6 +11,8 @@ struct Regex: ExpressibleByStringLiteral {
         return pattern
     }
 
+    // MARK: Match functions
+
     /**
 	Matches the given pattern with `toMatch`
 
@@ -21,7 +23,7 @@ struct Regex: ExpressibleByStringLiteral {
     - Returns: The first match, if you wish to match more, use `match(toMatch: String, mode: RegexMode) -> String`
     */
     public func match(toMatch: String) throws -> String {
-    	guard let match = match(toMatch: toMatch, mode: .first).first else { throw RegexError.noMatch }
+    	guard let match =  try match(toMatch: toMatch, mode: .first).first else { throw RegexError.noMatch }
     	return match
     }
 
@@ -33,12 +35,33 @@ struct Regex: ExpressibleByStringLiteral {
 	- Parameter toMatch: The string we should match
 	- Parameter mode: The mode at which the function should operate at
 
+	- Throws: If no match is given, or if the pattern is poorly formattet
+
 	- Returns: All the matches (in accordance to mode)
     */
-    public func match(toMatch: String, mode: RegexMode) -> [String] {
-    	[toMatch]
+    public func match(toMatch: String, mode: RegexMode) throws -> [String] {
+    	if doesMatch(toMatch: toMatch) {
+	    	var collection: [String] = []
+
+	    	// For mode = .first
+	    	var matches = 0
+	    	for character in toMatch {
+	    		if mode == .first && matches > 0 {
+	    			break
+	    		}
+	    	}
+
+	    	return collection
+    	} else {
+    		throw RegexError.noMatch
+    	}
     }
 
+    /**
+    */
+    public func doesMatch(toMatch: String) -> Bool {
+    	return false
+    }
 
     enum RegexMode {
     	case first
